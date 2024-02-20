@@ -3,9 +3,11 @@ const { path } = require('@vuepress/utils');
 const sidebar = require('./sidebar/en');
 const sidebar_es = require('./sidebar/es');
 const sidebar_cn = require('./sidebar/cn');
+const sidebar_ptbr = require('./sidebar/pt-br');
 const footer = require('./footer/en');
 const footer_es = require('./footer/es');
 const footer_cn = require('./footer/cn');
+const footer_ptbr = require('./footer/pt-br');
 
 module.exports = {
   /**
@@ -51,7 +53,12 @@ module.exports = {
       lang: 'cn-CN',
       ariaLabel: 'Chinese',
       label: 'Chinese (WIP)',
-    }
+    },
+    '/pt-br/': {
+      lang: 'pt-PT',
+      ariaLabel: 'Portuguese',
+      label: 'Portuguese (WIP)',
+    },
   },
 
   /**
@@ -94,6 +101,12 @@ module.exports = {
         footer: footer_cn,
         editLinkText: '帮助我们改善此页面',
         searchPlaceholder: '搜索',
+      },
+      '/pt-br/': {
+        sidebar: sidebar_ptbr,
+        footer: footer_ptbr,
+        editLinkText: '',
+        searchPlaceholder: '',
       }
     },
     
